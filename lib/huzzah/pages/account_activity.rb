@@ -4,7 +4,7 @@ module Moolah
     locator(:activities)  { divs(class: 'activity') }
 
     def most_recent_transaction
-      activities.last.text
+      activities.last.when_present.text
     end
 
   end
